@@ -193,6 +193,14 @@ app.delete('/plant/:id', (req, res)=>{
     })
 })
 
+app.use("*", (req, res)=>{
+    res.send(
+        `<div style="text-align: center;">
+        <h1>404 Not Found</h1>
+        </div>`
+    )
+})
+
 app.listen(PORT, () => {
     console.log(`Server is running on PORT ${PORT}`)
 })
